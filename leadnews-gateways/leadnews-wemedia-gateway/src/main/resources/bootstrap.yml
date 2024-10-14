@@ -1,0 +1,13 @@
+server:
+  port: 51602
+spring:
+  application:
+    name: leadnews-wemedia-gateway
+  cloud:
+    nacos:
+      server-addr: 192.168.130.1:8848
+      username: nacos
+      password: nacos
+      config:
+        server-addr: 192.168.130.1:8848
+        file-extension: yaml
