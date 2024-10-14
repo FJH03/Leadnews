@@ -1,6 +1,6 @@
 package cnsr.fjh03.article.mapper;
 
-import cnsr.fjh03.model.article.pojo.ApArticle;
+import cnsr.fjh03.model.article.pojos.ApArticle;
 import cnsr.fjh03.model.common.dtos.ArticleHomeDto;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;

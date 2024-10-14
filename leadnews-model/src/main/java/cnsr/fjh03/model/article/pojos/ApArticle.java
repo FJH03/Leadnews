@@ -1,4 +1,4 @@
-package cnsr.fjh03.model.article.pojo;
+package cnsr.fjh03.model.article.pojos;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

@@ -1,6 +1,6 @@
 package cnsr.fjh03.article.service;
 
-import cnsr.fjh03.model.article.pojo.ApArticle;
+import cnsr.fjh03.model.article.pojos.ApArticle;
 import cnsr.fjh03.model.common.dtos.ArticleHomeDto;
 import cnsr.fjh03.model.common.dtos.ResponseResult;
 import com.baomidou.mybatisplus.extension.service.IService;

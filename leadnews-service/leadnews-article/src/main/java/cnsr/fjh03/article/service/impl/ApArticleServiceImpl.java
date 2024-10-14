@@ -3,7 +3,7 @@ package cnsr.fjh03.article.service.impl;
 import cnsr.fjh03.article.mapper.ApArticleMapper;
 import cnsr.fjh03.article.service.ApArticleService;
 import cnsr.fjh03.common.constants.ArticleConstants;
-import cnsr.fjh03.model.article.pojo.ApArticle;
+import cnsr.fjh03.model.article.pojos.ApArticle;
 import cnsr.fjh03.model.common.dtos.ArticleHomeDto;
 import cnsr.fjh03.model.common.dtos.ResponseResult;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
