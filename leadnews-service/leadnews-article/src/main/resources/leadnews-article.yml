@@ -6,6 +6,12 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     application:
       name: leadnews-article
+  freemarker:
+    cache: false #关闭模板缓存，方便测试
+    settings:
+      template_update_delay: 0
+    suffix: .ftl #指定模板名称后缀
+
 
 springdoc:
   swagger-ui:

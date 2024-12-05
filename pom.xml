@@ -10,6 +10,7 @@
         <module>leadnews-gateways</module>
         <module>leadnews-feign-api</module>
         <module>leadnews-test</module>
+		<module>leadnews-basic</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
