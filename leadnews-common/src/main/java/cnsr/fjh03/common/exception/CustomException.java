@@ -10,10 +10,10 @@ import cnsr.fjh03.model.common.enums.AppHttpCodeEnum;
  * @Time: 16:30
  * @Description:添加自定义描述
  */
-public class CustomException extends RuntimeException{
+public class CustomException extends RuntimeException {
     private AppHttpCodeEnum appHttpCodeEnum;
 
-    public CustomException(AppHttpCodeEnum appHttpCodeEnum){
+    public CustomException(AppHttpCodeEnum appHttpCodeEnum) {
         this.appHttpCodeEnum = appHttpCodeEnum;
     }
 

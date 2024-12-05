@@ -13,4 +13,5 @@ import org.apache.ibatis.annotations.Mapper;
  * @Description:添加自定义描述
  */
 @Mapper
-public interface ApUserMapper extends BaseMapper<ApUser> {}
+public interface ApUserMapper extends BaseMapper<ApUser> {
+}

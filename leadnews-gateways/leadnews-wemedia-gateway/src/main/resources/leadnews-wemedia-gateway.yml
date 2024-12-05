@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+      routes:
+        - id: leadnews-wemedia
+          uri: lb://leadnews-wemedia
+          predicates:
+            - Path=/wemedia/**
+          filters:
+            - StripPrefix=1

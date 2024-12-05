@@ -56,7 +56,7 @@ public class JwtUtil {
      * 用于直接获取数据
      *
      * @param token 传入token
-     * @param KEY   从token中获取传入的KEY的值
+     * @param key   从token中获取传入的KEY的值
      */
     public static String getDataByKey(String token, String key) {
         return verifyToken(token).getClaim(key).asString();

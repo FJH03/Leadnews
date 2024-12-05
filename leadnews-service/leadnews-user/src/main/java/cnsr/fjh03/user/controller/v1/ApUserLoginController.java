@@ -28,7 +28,7 @@ public class ApUserLoginController {
 
     @PostMapping("login_auth")
     @Operation(summary = "用户登录")
-    public ResponseResult login(@io.swagger.v3.oas.annotations.parameters.RequestBody(description = "登录DTO实体") @RequestBody LoginDto dto){
+    public ResponseResult login(@io.swagger.v3.oas.annotations.parameters.RequestBody(description = "登录DTO实体") @RequestBody LoginDto dto) {
         return apUserService.login(dto);
     }
 }

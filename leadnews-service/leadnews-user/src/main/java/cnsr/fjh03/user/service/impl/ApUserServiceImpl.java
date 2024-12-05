@@ -28,24 +28,25 @@ import java.util.Map;
 public class ApUserServiceImpl extends ServiceImpl<ApUserMapper, ApUser> implements ApUserService {
     /**
      * app端登录功能
+     *
      * @param dto
      * @return
      */
     @Override
     public ResponseResult login(LoginDto dto) {
         //1.正常登录 用户名和密码
-        if(StringUtils.isNotBlank(dto.getPhone()) && StringUtils.isNotBlank(dto.getPassword())){
+        if (StringUtils.isNotBlank(dto.getPhone()) && StringUtils.isNotBlank(dto.getPassword())) {
             //1.1 根据手机号查询用户信息
             ApUser dbUser = getOne(Wrappers.<ApUser>lambdaQuery().eq(ApUser::getPhone, dto.getPhone()));
-            if(dbUser == null){
-                return ResponseResult.errorResult(AppHttpCodeEnum.DATA_NOT_EXIST,"用户信息不存在");
+            if (dbUser == null) {
+                return ResponseResult.errorResult(AppHttpCodeEnum.DATA_NOT_EXIST, "用户信息不存在");
             }
 
             //1.2 比对密码
             String salt = dbUser.getSalt();
             String password = dto.getPassword();
             String pswd = DigestUtils.md5DigestAsHex((password + salt).getBytes());
-            if(!pswd.equals(dbUser.getPassword())){
+            if (!pswd.equals(dbUser.getPassword())) {
                 return ResponseResult.errorResult(AppHttpCodeEnum.LOGIN_PASSWORD_ERROR);
             }
 
@@ -53,19 +54,19 @@ public class ApUserServiceImpl extends ServiceImpl<ApUserMapper, ApUser> impleme
             Map<String, Long> mp = new HashMap<>();
             mp.put("id", dbUser.getId().longValue());
             String token = JwtUtil.getToken(mp);
-            Map<String,Object> map = new HashMap<>();
-            map.put("token",token);
+            Map<String, Object> map = new HashMap<>();
+            map.put("token", token);
             dbUser.setSalt("");
             dbUser.setPassword("");
-            map.put("user",dbUser);
+            map.put("user", dbUser);
 
             return ResponseResult.okResult(map);
-        }else {
+        } else {
             //2.游客登录
-            Map<String,Object> map = new HashMap<>();
+            Map<String, Object> map = new HashMap<>();
             Map<String, Long> mp = new HashMap<>();
             mp.put("id", 0L);
-            map.put("token",JwtUtil.getToken(mp));
+            map.put("token", JwtUtil.getToken(mp));
             return ResponseResult.okResult(map);
         }
     }

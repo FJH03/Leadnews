@@ -14,4 +14,5 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @Import(OpenApiConfig.class)
-public class ApiConfig {}
+public class ApiConfig {
+}
