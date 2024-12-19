@@ -1,6 +1,6 @@
 package cnsr.fjh03.app.gateway.filter;
 
-import cnsr.fjh03.common.utils.JwtUtil;
+import cnsr.fjh03.app.gateway.utils.JwtUtil;
 import com.alibaba.cloud.commons.lang.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;

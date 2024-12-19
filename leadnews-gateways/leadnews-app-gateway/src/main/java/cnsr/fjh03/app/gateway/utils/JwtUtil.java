@@ -1,4 +1,4 @@
-package cnsr.fjh03.common.utils;
+package cnsr.fjh03.app.gateway.utils;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTCreator;

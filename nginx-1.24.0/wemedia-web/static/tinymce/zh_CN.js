@@ -1,4 +1,4 @@
-tinymce.addI18n('zh_CN',{
+tinymce.addI18n('zh_CN', {
     "Redo": "\u91cd\u590d",
     "Undo": "\u64a4\u6d88",
     "Cut": "\u526a\u5207",
@@ -258,4 +258,4 @@ tinymce.addI18n('zh_CN',{
     "Tools": "\u5de5\u5177",
     "Powered by {0}": "\u7531{0}\u9a71\u52a8",
     "Rich Text Area. Press ALT-F9 for menu. Press ALT-F10 for toolbar. Press ALT-0 for help": "\u5728\u7f16\u8f91\u533a\u6309ALT-F9\u6253\u5f00\u83dc\u5355\uff0c\u6309ALT-F10\u6253\u5f00\u5de5\u5177\u680f\uff0c\u6309ALT-0\u67e5\u770b\u5e2e\u52a9"
-    });
+});
