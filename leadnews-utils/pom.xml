@@ -3,13 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>leadnews-service</artifactId>
+        <artifactId>Leadnews</artifactId>
         <groupId>cnsr.fjh_03</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>leadnew-wemedia</artifactId>
+    <groupId>cnsr.fjh03</groupId>
+    <artifactId>leadnews-utils</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -19,19 +20,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bootstrap</artifactId>
-        </dependency>
-        <dependency>
             <groupId>cnsr.fjh_03</groupId>
-            <artifactId>file-starter</artifactId>
+            <artifactId>leadnews-model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>cnsr.fjh03</groupId>
-            <artifactId>leadnews-utils</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>2.0.32</version>
         </dependency>
     </dependencies>
 

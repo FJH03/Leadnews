@@ -7,18 +7,17 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * <p>
- * 自媒体图文素材信息表
+ * 自媒体图文引用素材信息表
  * </p>
  *
  * @author itheima
  */
 @Data
-@TableName("wm_material")
-public class WmMaterial implements Serializable {
+@TableName("wm_news_material")
+public class WmNewsMaterial implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -29,35 +28,29 @@ public class WmMaterial implements Serializable {
     private Integer id;
 
     /**
-     * 自媒体用户ID
+     * 素材ID
      */
-    @TableField("user_id")
-    private Integer userId;
+    @TableField("material_id")
+    private Integer materialId;
 
     /**
-     * 图片地址
+     * 图文ID
      */
-    @TableField("url")
-    private String url;
+    @TableField("news_id")
+    private Integer newsId;
 
     /**
-     * 素材类型
-            0 图片
-            1 视频
+     * 引用类型
+            0 内容引用
+            1 主图引用
      */
     @TableField("type")
     private Short type;
 
     /**
-     * 是否收藏
+     * 引用排序
      */
-    @TableField("is_collection")
-    private Short isCollection;
-
-    /**
-     * 创建时间
-     */
-    @TableField("created_time")
-    private Date createdTime;
+    @TableField("ord")
+    private Short ord;
 
 }

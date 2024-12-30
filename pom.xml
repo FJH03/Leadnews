@@ -11,6 +11,7 @@
         <module>leadnews-feign-api</module>
         <module>leadnews-test</module>
 		<module>leadnews-basic</module>
+        <module>leadnews-utils</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>

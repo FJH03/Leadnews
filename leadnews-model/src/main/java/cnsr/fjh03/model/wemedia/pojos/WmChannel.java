@@ -11,48 +11,53 @@ import java.util.Date;
 
 /**
  * <p>
- * 自媒体图文素材信息表
+ * 频道信息表
  * </p>
  *
  * @author itheima
  */
 @Data
-@TableName("wm_material")
-public class WmMaterial implements Serializable {
+@TableName("wm_channel")
+public class WmChannel implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 主键
-     */
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
     /**
-     * 自媒体用户ID
+     * 频道名称
      */
-    @TableField("user_id")
-    private Integer userId;
+    @TableField("name")
+    private String name;
 
     /**
-     * 图片地址
+     * 频道描述
      */
-    @TableField("url")
-    private String url;
+    @TableField("description")
+    private String description;
 
     /**
-     * 素材类型
-            0 图片
-            1 视频
+     * 是否默认频道
+     * 1：默认     true
+     * 0：非默认   false
      */
-    @TableField("type")
-    private Short type;
+    @TableField("is_default")
+    private Boolean isDefault;
 
     /**
-     * 是否收藏
+     * 是否启用
+     * 1：启用   true
+     * 0：禁用   false
      */
-    @TableField("is_collection")
-    private Short isCollection;
+    @TableField("status")
+    private Boolean status;
+
+    /**
+     * 默认排序
+     */
+    @TableField("ord")
+    private Integer ord;
 
     /**
      * 创建时间
